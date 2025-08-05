@@ -16,12 +16,14 @@ jobs:
         uses: actions/setup-python@v3
         with:
           python-version: "3.x"
-
+      - name: dotenv 설치
+        run:
+          pip install python-dotenv
+          
       - name: OpenWeather API로 서울 날씨 업데이트
         run: |
           pip install requests
           python update_weather.py
-          pip install python-dotenv
         env:
           WEATHER: ${{ secrets.WEATHER }}
 
