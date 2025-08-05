@@ -21,7 +21,7 @@ jobs:
         run: |
           pip install requests
           python update_weather.py
-          pip install dotenv
+          pip install python-dotenv
         env:
           WEATHER: ${{ secrets.WEATHER }}
 
