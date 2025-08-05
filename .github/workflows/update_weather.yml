@@ -2,7 +2,7 @@ name: Update Weather in README
 
 on:
   schedule:
-    - cron: "*/2 * * * *"  # 매일 오후 3시 (UTC 기준 6시)
+    - cron: "*/5 * * * *"  # 매일 오후 3시 (UTC 기준 6시)
   workflow_dispatch:  # 수동 실행 가능
 
 jobs:
@@ -19,7 +19,7 @@ jobs:
       - name: dotenv 설치
         run:
           pip install python-dotenv
-          
+
       - name: OpenWeather API로 서울 날씨 업데이트
         run: |
           pip install requests
